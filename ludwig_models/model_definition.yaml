@@ -1,0 +1,22 @@
+input_features:
+    -
+        name: LotArea
+        type: numerical
+    -
+        name: BldgType
+        type: category
+    -
+        name: BsmtFinSF1
+        type: numerical
+        missing_value_strategy: fill_with_mean
+    -
+        name: GrLivArea
+        type: numerical
+    -
+        name: GarageType
+        type: category
+
+output_features:
+    -
+        name: SalePrice
+        type: numerical

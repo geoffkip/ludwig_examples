@@ -1,0 +1,98 @@
+{
+    "BldgType": {
+        "idx2str": [
+            "<UNK>",
+            "1Fam",
+            "TwnhsE",
+            "Duplex",
+            "Twnhs",
+            "2fmCon"
+        ],
+        "preprocessing": {
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "1Fam": 1220,
+            "2fmCon": 31,
+            "<UNK>": 0,
+            "Duplex": 52,
+            "Twnhs": 43,
+            "TwnhsE": 114
+        },
+        "str2idx": {
+            "1Fam": 1,
+            "2fmCon": 5,
+            "<UNK>": 0,
+            "Duplex": 3,
+            "Twnhs": 4,
+            "TwnhsE": 2
+        },
+        "vocab_size": 6
+    },
+    "BsmtFinSF1": {
+        "preprocessing": {
+            "fill_value": 0,
+            "missing_value_strategy": "fill_with_const"
+        }
+    },
+    "GarageType": {
+        "idx2str": [
+            "<UNK>",
+            "Attchd",
+            "Detchd",
+            "BuiltIn",
+            "nan",
+            "Basment",
+            "CarPort",
+            "2Types"
+        ],
+        "preprocessing": {
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "2Types": 6,
+            "<UNK>": 0,
+            "Attchd": 870,
+            "Basment": 19,
+            "BuiltIn": 88,
+            "CarPort": 9,
+            "Detchd": 387,
+            "nan": 81
+        },
+        "str2idx": {
+            "2Types": 7,
+            "<UNK>": 0,
+            "Attchd": 1,
+            "Basment": 5,
+            "BuiltIn": 3,
+            "CarPort": 6,
+            "Detchd": 2,
+            "nan": 4
+        },
+        "vocab_size": 8
+    },
+    "GrLivArea": {
+        "preprocessing": {
+            "fill_value": 0,
+            "missing_value_strategy": "fill_with_const"
+        }
+    },
+    "LotArea": {
+        "preprocessing": {
+            "fill_value": 0,
+            "missing_value_strategy": "fill_with_const"
+        }
+    },
+    "SalePrice": {
+        "preprocessing": {
+            "fill_value": 0,
+            "missing_value_strategy": "fill_with_const"
+        }
+    }
+}
