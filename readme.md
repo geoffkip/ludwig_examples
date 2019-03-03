@@ -13,7 +13,34 @@ python -m spacy download en
 ```
 
 ## Explanation
-The way ludwig works is that you give it a model_definition.yaml file with all the input features you want to train your model on and yout label variable (the variable you want to predict)
+The way ludwig works is that you give it a model_definition.yaml file with all the input features you want to train your model on and your label variable (the variable you want to predict).
+
+The model_definition.yaml file looks like this
+
+```
+input_features:
+    -
+        name: LotArea
+        type: numerical
+    -
+        name: BldgType
+        type: category
+    -
+        name: BsmtFinSF1
+        type: numerical
+        missing_value_strategy: fill_with_mean
+    -
+        name: GrLivArea
+        type: numerical
+    -
+        name: GarageType
+        type: category
+
+output_features:
+    -
+        name: SalePrice
+        type: numerical
+```
 
 To train the model you can simply run
 ```
@@ -34,8 +61,9 @@ You can also use the python api to go through an end to end training example wit
 
 I ran ludwig on the housing prices kaggle dataset and compared it to some classification algorithms and ludwig generally performed the same without having to do any feature engineering.
 
-To view a full simple end to end training and prediction script you can take a look at the
+To view a full simple end to end training and prediction script you can take a look at the script.
 ```
 ckd.py
 ```
-dataset. I trained a deep learning model with ludwig to predict whether a patient has ckd (chronic kidney disease) or not based on their age and several lab measurements taken. The kidney dataset was downloaded from the uci machine learning dataset repository.
+
+ I trained a deep learning model with ludwig to predict whether a patient has ckd (chronic kidney disease) or not based on their age and several lab measurements taken. The kidney dataset was downloaded from the uci machine learning dataset repository.
